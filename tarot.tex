@@ -2,6 +2,9 @@
 \documentclass[ebook,12pt,twoside,openright,extrafontsizes,final]{memoir}
 \usepackage{fontspec}
 \usepackage{lettrine}
+\usepackage{longtable}
+\usepackage{graphicx}
+\graphicspath{ {./} }
 
 \setsecnumdepth{chapter}
 \setmainfont[  
@@ -12,6 +15,8 @@
 
 \medievalpage
 \checkandfixthelayout
+
+\nouppercaseheads
 
 \begin{document}
 \frontmatter
@@ -33,6 +38,7 @@ Table of num of players x complexity
 \mainmatter
 
 \chapter{Preliminaries}
+\includegraphics[width=\textwidth]{french}
 \section{The Deck}
 \lettrine{T}{he} Tarot deck is comprised of the four usual suits – but with four, rather
 than three Court Cards – and a fifth suit that serves as permanent Trumps.
@@ -124,7 +130,7 @@ One you have passed, you may not reenter the bidding.
 
 \section{Tricks}
 Tarot games are all Trick-taking games. The most prestigious game of this family
-in the English speaking world is Bridge; perhaps the most common in Hearts, due
+in the English speaking world is Bridge; perhaps the most common, due
 to its ubiquity on the Windows operating system, is Hearts.
 
 A Trick consists of every player playing one card to the center of the table. 
@@ -132,8 +138,8 @@ The first player to play is said to lead to the trick: the suit of the card
 they play is called the suit led.  Every other player in rotation must, if
 they can, play a card of the same suit from their hand.  If they have no cards
 of the suit led, they must play a card from the Trump suit.  If they have no 
-remaining trumps either, they may play any card.  The highest Trump, or (if 
-no Trumps were played) the highest card of the suit led wins. The player who
+remaining trumps either, they may play any card.  The highest trump, or (if 
+no trumps were played) the highest card of the suit led wins. The player who
 played it collects the cards and places them facedown in a pile in front of
 him, and then leads to the next trick.
 
@@ -142,17 +148,20 @@ following suit.  The holder of the ’Scuse may play it at any point. It never
 wins a trick - but it isn’t lost: the player of the ’Scuse, after showing it,
 takes it back and adds it to his trick pile, and gives a worthless card in
 exchange for it.  If the player never takes a trick, the ’Scuse is forfeited
-to the person who one the trick to which it was played.  The ’Scuse is also
+to the person who won the trick to which it was played.  The ’Scuse is also
 forfeited to the winner of the trick if played to the last trick.  If the 
 ’Scuse is led to a trick, the next player may play anything, and their card
 counts as the lead.
 
 In the Austrian games, the ’Scuse is simply the XXII of Trumps.
 
-Tarot games are furthermore \emph{Point Trick} games.  Not only do the Tricks
-themselves have value, but certain cards are more valuable in and of themselves.
-These cards are the Court Cards, and the Trull: the 1 and 21 of Trumps,
-and the Excuse.
+Tarot games are furthermore \emph{Point Trick} games.  Not only do the tricks
+have value, but certain cards carry a value in and of themselves.
+These cards are the Court Cards, and the Trull: the I and XXI of Trumps,
+and the ’Scuse.
+
+Unless otherwise specified, the eldest player will always lead to the first
+trick.
 
 
 \section{Counting Points}
@@ -208,11 +217,145 @@ deck.  Each player's score is recorded as the difference between the card
 points they took and 36.
 
 
-\chapter{"Classic Tarot" (Ch. 3)}
-Gébélin
+\chapter{Großtarock}
+The classic form of the game, played for over a hundred years in France, Germany, 
+Italy, and Austria came to be known as Großtarock in German-speaking lands, to contrast
+it with the newer game played with only 54 cards. It is still played in Denmark, and 
+similar games are played in northern Italy as \emph{Mitigati.}
 
-\chapter{Großtarock (Ch. 4)}
-Danish -Perhaps with pot-less scoring as well (see Dummet, 105)
+\section{Three or Four Player}
+\lettrine{T}{hree} players are active at a time. If four participate, the player opposite
+the dealer takes no part in a given hand.  A game may consist of as many hands as desired,
+as long as each player is allowed to deal an equal number of times.
+
+
+The Dealer deals 25 cards to each player in batches of 5.  She then takes the
+remaining 3 cards into her own hand and discards three.  The usual restrictions apply. 
+Furthermore, no card that would otherwise be part of one of the following Declarations may 
+be discarded.
+
+\subsection{Declarations}
+Starting with the Dealer and going in order, each player must make any of the following 
+Declarations of card combinations they hold.
+
+\begin{longtable}[c]{lp{3in}}
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{\textit{Description}} \\
+\endfirsthead
+\endhead
+\textbf{Trumps} & ‘Ten Trumps’ is worth \textbf{10} points; more may be declared for 
+\textbf{5} more each. (\emph{E.g.}, ‘Eleven Trumps’ is \textbf{15}, ‘Twelve Trumps’ is 
+\textbf{20}, \emph{\&c.})  For the purposes of the declaration, the ’Scuse counts as
+a trump. It must be stated whether ‘with’ or ‘without’ the Pagat. \\
+\textbf{Matadors} & ‘Three Matadors’ consists of the three cards of the Trull, for 
+\textbf{10} points. ‘Four Matadors’ adds the XX of Trumps for \textbf{15}, ‘Five 
+Matadors’ the XX and XIX for \textbf{20}, \emph{\&c.} \\
+\textbf{Cavalry} & A ‘Cavalry’ is a set of all four Court Cards in one suit for \textbf{10}; 
+a ‘Half Cavalry’ is any three Court Cards in one suit plus the ’Scuse for \textbf{5}, and 
+an ‘Abundant Cavalry’ is all four Courts plus the ’Scuse for \textbf{15}. The suit (and 
+missing card) must be named. \\
+\textbf{Kings} & ‘Kings’ is all four Kings for \textbf{10}; ‘Half Kings’ is any three plus 
+the ’Scuse for \textbf{5}, and ‘Abundant Kings’ is all four Kings plus the ’Scuse for 
+\textbf{15}. The missing suit (for Half) must be named.
+\end{longtable}
+
+\subsection{Play}
+Eldest leads to the first Trick. The ’Scuse serves as Excuse. If played to any of the last
+three tricks it is lost to the winner of the trick.
+
+A player who loses a King or the Pagat to another player before the final trick pays 
+\textbf{5} points to each of them.
+
+At the end of the hand, one of the following conditions will be met:
+\begin{longtable}[c]{lp{3in}}
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{\textit{Description}} \\
+\endfirsthead
+\endhead
+\textbf{Tout} & One player has taken all tricks.  He is payed \textbf{85} by each other 
+    player. \\
+\textbf{Nill} & Exactly one player only has taken no tricks. She is payed \textbf{25} by 
+    each other player. Ultimos and card points are not scored, but Failed Ultimos are.\\
+\textbf{Ultimo} & One player has taken the last trick with the Pagat or with a King. He is 
+    payed \textbf{45} for the Pagat, or \textbf{40} for the King, by each other player. 
+    Other players may score a Failed Ultimo at the same time. \\
+\textbf{Failed Ultimo} & Any player who plays a Pagat or a King to the last trick, but 
+    does not win the trick. She pays \textbf{45} for the lost Pagat or \textbf{40} for 
+    the lost King to each other player.\\
+\textbf{Last Trick} & If none of the above has occured, the player who wins the last trick.
+    He is payed \textbf{20} by each other player. \\
+\end{longtable}
+
+Finally, each player counts the card points they took.  The total should always come to 
+\textbf{78}
+
+\subsection{Scoring with Paper}
+For the above declarations, bonuses during play, and final outcome after the last trick,
+the value noted is recorded as positive for a player who ‘is payed’ or as negative for
+the player who ‘pays’.  Only the subject player receives a score. For example, if a player
+declares ‘Ten Trumps’, he is payed 10: so \textbf{10} is added to his score.  If a player
+loses a King on the last trick for a Failed Ultimo, she pays 40: so \textbf{-40} is added
+to her score.
+
+Finally, the positive or negative difference from \textbf{26} each player took in card
+points is added to the score (unless a Nill occured)
+
+\subsection{Scoring with Counters and Pots}
+The use of counters and pots for scoring is more traditional, and makes the Ultimos much
+more exciting.
+
+Each player begins with a set of counters: 20 units of \textbf{5} and 10 units each of 
+\textbf{20} and \textbf{50} should be sufficient. Ideally each player’s counters are 
+a different color, so that it's easy to see who’s ahead and who’s behind.
+
+There are two Ultimo Pots, one each for the Pagat and for a King. These might be a saucer
+for the Pagat and a small bowl in the center for Kings.
+
+Whenever either pot is empty, including at the start of the game, every player (including
+the fourth, if four play) contribute \textbf{20} points to it as a foundation.
+
+After dealing and discarding, the Dealer contributes \textbf{5} to each pot. Afterwords she
+moves the pots between her and eldest, to indicate that the discard is complete.
+
+Payments for declarations or bonuses are made as described in the main rules. In addition,
+a player who loses a King or the Pagat before the last trick also adds \textit{5} to the
+appropriate pot. 
+
+A winner of a Tout also receives the contents of both pots; a winner of an Ultimo receives
+the contents of the appropriate pot.  A player who fails an Ultimo doubles the appropriate
+pot.  If a failed Ultimo and an Ultimo or Tout concern the same pot, first the value is
+counted and given to the winner; then the same amount is contributed back in by the loser.
+
+Unless a Nill occured, each player then counts their card points, and pays the next dealer
+according to the following table:
+
+\begin{center}
+\begin{tabular}{cl}
+\textbf{9-13}  & pay dealer 15\\
+\textbf{14-18} & pay dealer 10\\
+\textbf{19-23} & pay dealer 5 \\
+\textbf{24-28} & no payment\\
+\textbf{29-33} & receive 5 from dealer\\
+\textbf{34-38} & receive 10 from dealer\\
+\textbf{39-43} & receive 15 from dealer
+\end{tabular}
+\end{center}
+
+At the end of play, the contents of both pots are distrubted equally among the players.
+
+
+
+\section{Two Player}
+\lettrine{A}{ll} as above, except:
+Two hands of 25 are dealt, the dealer taking 3 extra cards.  The remaining 25 cards, called
+the \emph{Mort} are set aside unused for that hand.
+
+Players accumulate the points for Declarations, card points, and bonuses as above. 
+
+There is no award for {Tout} or {Nill}. The payents for Ultimos and the last trick are 
+reduced to \textbf{15} for the Pagat, \textbf{10} for a King, and \textbf{5} for the
+Last Trick
+
+The Score may be kept on paper or a Cribbage board.  The first to reach \textbf{100} wins.
+
 
 \chapter{Tarock-l’Hombre}
 (6.7, 7.1)
